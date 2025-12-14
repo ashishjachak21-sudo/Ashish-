@@ -1,0 +1,152 @@
+.checkout-page {
+  padding: 30px 20px;
+}
+
+.checkout-page h1 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.checkout-content {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 30px;
+}
+
+.checkout-form {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.form-section {
+  margin-bottom: 40px;
+}
+
+.form-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.payment-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.payment-option:hover {
+  border-color: var(--primary-color);
+}
+
+.payment-option input[type="radio"] {
+  width: 20px;
+  height: 20px;
+}
+
+.checkout-form .btn {
+  width: 100%;
+  padding: 16px;
+  font-size: 18px;
+}
+
+.order-summary {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  height: fit-content;
+  position: sticky;
+  top: 90px;
+}
+
+.order-summary h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.summary-items {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.summary-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.summary-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.item-info {
+  flex: 1;
+}
+
+.item-info p {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.item-info span {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.item-price {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.summary-totals .summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+}
+
+.summary-row.total {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--primary-color);
+  border-top: 2px solid var(--border-color);
+  margin-top: 15px;
+  padding-top: 15px;
+}
+
+@media (max-width: 768px) {
+  .checkout-content {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .order-summary {
+    position: static;
+  }
+}
